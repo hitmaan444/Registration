@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0
+    }
+    body {
+      background-color:rgb(254, 254, 254);
+    }
+    
+    h2, h1 {
+      color: rgb(9, 9, 67);
+      margin: 15px;
+    }
+    
+    .container{
+    background-color: rgb(159, 132, 206);
+    width: 100%;
+    
+    
+    }
+    div a, .allAddress {
+        background: #fff;
+        box-shadow: 1px 3px 5px 3px #0000004f;
+        padding: 0 7px;
+        height: 40px;
+        line-height: 40px;
+        text-decoration: none;
+        color: black;
+        border:none;
+        display: inline-block;
+    }
+    .row{
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+    
+    
+      background-color: white;
+    }
+    
+    .button{
+      width: 100px;
+      height: 40px;
+      background-color: blueviolet;
+      color: white;
+      border-color: grey;
+    }
+    
+    .inside-cont{
+      background-color: white;
+      padding: 15px;
+      margin: 30px;
+    }
+    
+    .image{
+      display: flex;
+      width: 680px;
+      margin: 10px;
+    
+    }
+    
+    .image-lists{
+      display: flex;
+      width: 300px;
+      margin: 10px;
+      padding-bottom: 20px;;
+    }
+    
+    
+    .image-product{
+      width: 300px;
+      margin: 15px;
+    }
+    
+    
+    .inside-cont{
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    .navigator{
+      display: inline-block;
+      padding: 10px;
+      font-weight: bold;
+    }
+    
+    nav{
+      background-color: rgb(9, 9, 67);
+    
+      padding-right: 40px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+    
+    nav a{
+      color:gainsboro;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    
+    .navigator:hover {
+      background-color:blueviolet;
+    }
+    
+    nav a:hover{
+      color: white;
+    }

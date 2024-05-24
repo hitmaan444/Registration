@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+  <title>{% block title %}Market{% endblock %}</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="navigator"><a href="">Products</a></li>
+         <li class="navigator"><a href="">Shoping</a></li>
+        <li class="navigator"><a href="">My Orders</a></li>
+      <li class="navigator"><a href="{% url 'registration:editProfile' %}">Profile</a></li>
+      <li class="navigator"><a href="{% url 'registration:changePassword' %}">Change Password</a></li>
+
+      <li class="navigator"><a href="{% url 'registration:logout' %}">Logout</a></li>
+
+    </ul>
+  </nav>
+  <main>
+    {% block content %}
+       
+    {% if messages %}
+<div class="alert alert-warning newerrorhello" role="alert">
+    <ul class="messages">
+
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+    </ul>
+
+</div>
+{% endif %}
+
+{% endblock %}
+    
+  </main>
+</body>
+</html>

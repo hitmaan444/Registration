@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+  }
+  @font-face {
+    font-family: extra;
+    src: url(../bpg_extrasquare_mtavruli_2009.ttf);
+  }
+  /* BLUE */
+.topBar{
+  width: 100%;
+  height: 50vh;
+  background-color: #0A0A0A;
+}
+#mainContent{
+  height: 50vh;
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.topBar #logo{
+
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.topBar img{
+
+  width: 379px;
+  height: 195px;
+}
+#mainContent .main_section {
+  text-align: center;
+  margin-top: -23%;
+}
+.mainContentInner{
+  width: 676px;
+  background-color: #fff;
+  border:  3px solid #000000;
+  box-shadow: 0px 0px 21px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  display: inline-block;
+  justify-content: center;
+  /* margin: -150px auto 0; */
+  height: max-content;
+}
+
+
+.header-menu{
+  display: flex;
+  justify-content: center;
+
+
+background: rgba(237, 105, 35, 0.2);
+border-radius: 60px;
+}
+.header-menu li{
+  text-align: center;
+  width: 254px;
+  margin: 15px 0;
+
+
+}
+.header-menu li a{
+  text-decoration: none;
+  font-family: 'Sylfaen';
+
+}
+.header-menu li .active{
+  background: rgba(237, 105, 35, 0.68);
+border-radius: 60px;
+}
+.header-menu li .active a{
+
+  font-family: 'Sylfaen';
+  color: #000000;
+
+
+}
+.headerButton{
+
+font-family: 'Sylfaen';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 42px;
+}
+header{
+  width: 580px;
+  margin: 55px auto 0;
+}
+
+/* section content */
+
+#content-wrapper{
+  margin-top: 40px;
+}
+
+#content-wrapper .input_value{
+  display: flex;
+  flex-direction: column;
+}
+#content-wrapper .input_value label{
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 36px;
+
+color: #000000;
+
+}
+
+#content-wrapper .input_value input{
+  border:none;
+border-bottom:3px solid #000000;
+margin-bottom:14px;
+padding: 5px  30px 5px 30px;
+height: 39px;
+    font-size: 25px;
+}
+
+i.iconFn {
+  display: block;
+  width: 31px;
+  position: relative;
+  top: 35px;
+  color: grey;
+  font-size: 21px;
+}
+
+#signin-button{
+  width: 40%;
+height: 70px;
+
+border-radius: 20px;
+background: #ED6923;
+border: none;
+font-family: 'Sylfaen';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 42px;
+letter-spacing: 0.02em;
+display: flex;
+justify-content: center;
+align-items: center;
+display: block;
+margin: 50px auto;
+color: #FFFFFF;
+}
+.headerButton a{
+  color: #ED6923;
+}
+div#id_status {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 22px;
+}
+div#id_status label{
+font-family: extra;
+}
+/* TOGGLE STYLING */
+#id_statuss {
+  margin: 0 0 1.5rem;
+  box-sizing: border-box;
+  /* font-size: 0; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 0 auto;
+  width: 70%;
+}
+#id_statuss input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+#id_statuss  input + label {
+  margin: 0;
+  padding: 0.75rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #DDD;
+  background-color: #FFF;
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-out, color 0.25s ease-out, background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+  /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+  /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+  /* ----- */
+  padding: 10px 0px;
+  border-radius: 7px;
+  width: 183px;
+}
+#id_statuss label:first-of-type + input {
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+}
+#id_statuss label:last-of-type + input  {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
+}
+
+ #id_statuss  input:checked +label {
+  background-color: #4B9DEA;
+  color: #FFF;
+  box-shadow: 0 0 10px rgba(102, 179, 251, 0.5);
+  border-color: #4B9DEA;
+  z-index: 1;
+}
+ #id_statuss  input:focus +label {
+  outline: dotted 1px #CCC;
+  outline-offset: 0.45rem;
+}
+@media (max-width: 800px) {
+  .toggle input + label {
+    padding: 0.75rem 0.25rem;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* STYLING FOR THE STATUS HELPER TEXT FOR THE DEMO */
+.status {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.status span {
+  font-weight: 600;
+  color: #B6985A;
+}
+.status span:first-of-type {
+  display: inline;
+}
+.status span:last-of-type {
+  display: none;
+}
+@media (max-width: 800px) {
+  .status span:first-of-type {
+    display: none;
+  }
+  .status span:last-of-type {
+    display: inline;
+  }
+}
+
+main header .header-menu a{
+  font-family: extra;
+}
+
+#id_status{
+  display: none;
+}
+.topButton a:hover {
+  color: orange;
+  text-decoration: none;
+}* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+  }
+  @font-face {
+    font-family: extra;
+    src: url(../bpg_extrasquare_mtavruli_2009.ttf);
+  }
+  /* BLUE */
+.topBar{
+  width: 100%;
+  height: 50vh;
+  background-color: #0A0A0A;
+}
+#mainContent{
+  height: 50vh;
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.topBar #logo{
+
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.topBar img{
+
+  width: 379px;
+  height: 195px;
+}
+#mainContent .main_section {
+  text-align: center;
+  margin-top: -23%;
+}
+.mainContentInner{
+  width: 676px;
+  background-color: #fff;
+  border:  3px solid #000000;
+  box-shadow: 0px 0px 21px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  display: inline-block;
+  justify-content: center;
+  /* margin: -150px auto 0; */
+  height: max-content;
+}
+
+
+.header-menu{
+  display: flex;
+  justify-content: center;
+
+
+background: rgba(237, 105, 35, 0.2);
+border-radius: 60px;
+}
+.header-menu li{
+  text-align: center;
+  width: 254px;
+  margin: 15px 0;
+
+
+}
+.header-menu li a{
+  text-decoration: none;
+  font-family: 'Sylfaen';
+
+}
+.header-menu li .active{
+  background: rgba(237, 105, 35, 0.68);
+border-radius: 60px;
+}
+.header-menu li .active a{
+
+  font-family: 'Sylfaen';
+  color: #000000;
+
+
+}
+.headerButton{
+
+font-family: 'Sylfaen';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 42px;
+}
+header{
+  width: 580px;
+  margin: 55px auto 0;
+}
+
+/* section content */
+
+#content-wrapper{
+  margin-top: 40px;
+}
+
+#content-wrapper .input_value{
+  display: flex;
+  flex-direction: column;
+}
+#content-wrapper .input_value label{
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 36px;
+
+color: #000000;
+
+}
+
+#content-wrapper .input_value input{
+  border:none;
+border-bottom:3px solid #000000;
+margin-bottom:14px;
+padding: 5px  30px 5px 30px;
+height: 39px;
+    font-size: 25px;
+}
+
+i.iconFn {
+  display: block;
+  width: 31px;
+  position: relative;
+  top: 35px;
+  color: grey;
+  font-size: 21px;
+}
+
+#signin-button{
+  width: 40%;
+height: 70px;
+
+border-radius: 20px;
+background: #ED6923;
+border: none;
+font-family: 'Sylfaen';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 42px;
+letter-spacing: 0.02em;
+display: flex;
+justify-content: center;
+align-items: center;
+display: block;
+margin: 50px auto;
+color: #FFFFFF;
+}
+.headerButton a{
+  color: #ED6923;
+}
+div#id_status {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 22px;
+}
+div#id_status label{
+font-family: extra;
+}
+/* TOGGLE STYLING */
+#id_statuss {
+  margin: 0 0 1.5rem;
+  box-sizing: border-box;
+  /* font-size: 0; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 0 auto;
+  width: 70%;
+}
+#id_statuss input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+#id_statuss  input + label {
+  margin: 0;
+  padding: 0.75rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #DDD;
+  background-color: #FFF;
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-out, color 0.25s ease-out, background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+  /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+  /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+  /* ----- */
+  padding: 10px 0px;
+  border-radius: 7px;
+  width: 183px;
+}
+#id_statuss label:first-of-type + input {
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+}
+#id_statuss label:last-of-type + input  {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
+}
+
+ #id_statuss  input:checked +label {
+  background-color: #4B9DEA;
+  color: #FFF;
+  box-shadow: 0 0 10px rgba(102, 179, 251, 0.5);
+  border-color: #4B9DEA;
+  z-index: 1;
+}
+ #id_statuss  input:focus +label {
+  outline: dotted 1px #CCC;
+  outline-offset: 0.45rem;
+}
+@media (max-width: 800px) {
+  .toggle input + label {
+    padding: 0.75rem 0.25rem;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* STYLING FOR THE STATUS HELPER TEXT FOR THE DEMO */
+.status {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.status span {
+  font-weight: 600;
+  color: #B6985A;
+}
+.status span:first-of-type {
+  display: inline;
+}
+.status span:last-of-type {
+  display: none;
+}
+@media (max-width: 800px) {
+  .status span:first-of-type {
+    display: none;
+  }
+  .status span:last-of-type {
+    display: inline;
+  }
+}
+
+main header .header-menu a{
+  font-family: extra;
+}
+
+#id_status{
+  display: none;
+}
+.topButton a:hover {
+  color: orange;
+  text-decoration: none;
+}

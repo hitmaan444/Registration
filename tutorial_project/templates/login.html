@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>registration</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Asset2.png' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_reset.css' %}">
+  
+
+
+</head>
+<body class="backgroundThird">
+  <div class="main">
+  <div class="topBar">
+  
+  </div>
+<main id="mainContent" class="backgroundThird">
+  <div class="main_section">
+  <div id="logo">
+    <img src="" alt="">
+  </div>
+  <div class="mainContentInner">
+    <div class="flexTop">
+	<header>
+		<ul class="header-menu">
+			<li>
+				<div id="header-login-wrapper" class="headerButton active">
+					<a href="" id="header-login-button">შესვლა</a>
+					<span id="header-login-line"></span>
+				</div>		
+			</li>
+			<li id="header-register-button" class="headerButton">
+        <a class="colorSecond" href="{% url 'registration:registration' %}">რეგისტრაცია </a></li>
+		</ul>
+	
+		<div id="content-wrapper">
+	<form action="{% url 'registration:login' %}" method="POST">
+
+    {% csrf_token %}
+    <div class="input_value">
+    <label for="email">ელ.ფოსტა</label>
+    <i class="iconFn fa-regular fa-envelope"></i>
+    {{form.email}}
+    {{form.email.errors}}
+    <label for="password">პაროლი</label>
+    <i class="iconFn fa-solid fa-lock"></i>
+    {{form.password}}
+    {{form.password.errors}}
+	  <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+		<button type="submit" id="signin-button">შესვლა</button>
+
+    </div>
+
+  </form>
+
+	</div>
+  </header>
+  </div>
+  </div>
+  </div>
+</main>
+</div>
+ 
+    <!------ end main_bgcolor ------->
+  </body>
+  </html>

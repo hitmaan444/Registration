@@ -1,0 +1,130 @@
+{% extends 'messages.html' %}
+{% block content %}
+<html lang="en">
+{% load static %}
+<head>
+    <title>registration</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Asset2.png' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth_reset.css' %}">
+</head>
+<body class="backgroundThird">
+  <div class="main">
+    <div class="topBar">
+  
+  </div>
+<main id="mainContent" class="">
+
+  <div class="main_section">
+  <div id="logo">
+    <img src="{% static 'logo.png' %}" alt="">
+  </div>
+  <div class="mainContentInner">
+    <div class="flexTop">
+	<header>
+		<ul class="header-menu">
+      <li id="header-register-button" class="headerButton">
+        <a href="{% url 'registration:login' %}" id="header-login-button">შესვლა</a>
+					<span id="header-login-line"></span>
+      </li>
+			<li>
+				<div id="header-login-wrapper" class="headerButton active">
+					<a href="{% url 'registration:registration' %}" id="header-login-button">რეგისტრაცია</a>
+					<span id="header-login-line"></span>
+				</div>		
+			</li>
+			
+		</ul>
+	
+		<div id="content-wrapper">
+      <form action="{% url 'registration:registration' %}" method="POST">
+        {% csrf_token %}
+        <div class="input_value">
+        <div class="status">
+         
+       
+         <div id="id_statuss">
+          <div>
+           
+            <input type="radio" id="Lawyer" name="status" class="input_status" value="vendor">
+            <label for="Lawyer">ვენდორი</label>
+
+          </div>  
+          <div>
+           
+            <input type="radio" id="Partner" name="status" class="input_status" value="customer">
+            <label for="Partner">ქასთომერი</label>
+
+          </div>
+
+
+  
+  
+  
+         </div>
+         </div>
+            <div hidden >
+            {{form.is_vendor}}
+             {{form.is_customer}}
+                </div>
+     
+        {{ form.status }}
+        {{ form.status.errors }}
+            <label for="id_id">საიდენტიფიკაციო ნომერი</label>
+         <i class="iconFn fa-regular fa-envelope"></i>
+
+        {{ form.identification_number }}
+        {{ form.identification_number.errors }}
+         <label for="email">ელფოსტა</label>
+         <i class="iconFn fa-regular fa-envelope"></i>
+
+        {{ form.email }}
+        {{ form.email.errors }}
+
+
+        <label for="email">პაროლი</label>
+        <i class="iconFn fa-solid fa-lock"></i>
+        {{ form.password1 }}
+        {{ form.password1.errors }}
+        <i class="iconFn fa-solid fa-lock"></i>
+        {{ form.password2 }}
+        {{ form.password2.errors }}
+        </div>
+	
+		<button type="submit" id="signin-button">რეგისტრაცია</button>
+    </form>
+  </div>
+</header>
+</div>
+</div>
+</div>
+</main>
+</div>
+ <script>
+  let input_status=document.querySelectorAll('.input_status');
+  let id_status=document.querySelector('#id_status');
+
+  input_status.forEach(value=>{
+    value.addEventListener('click', (e)=>{
+
+      if (e.currentTarget.value == 'vendor') {
+
+      document.getElementById("id_is_vendor").checked = true;
+      document.getElementById("id_is_customer").checked = false;
+      } else if (e.currentTarget.value == 'customer') {
+      document.getElementById("id_is_vendor").checked = false;
+      document.getElementById("id_is_customer").checked = true;
+      }
+    })
+  })
+ </script>
+    <!------ end main_bgcolor ------->
+  </body>
+  </html>
+  {% endblock %}
